@@ -1,8 +1,8 @@
 import pandas as pd
 import re
 
-INPUT_FILE = r"C:\Users\dell\Documents\ConvoProject_CustomMadeDataset.csv"
-OUTPUT_FILE = r"C:\Users\dell\Documents\Final_Govt_Schemes_Dataset.csv"
+INPUT_FILE = "data/ConvoProject_CustomMadeDataset.csv"
+OUTPUT_FILE = "data/Final_Govt_Schemes_Dataset.csv"
 
 def clean_text(text):
     text = str(text).lower()

@@ -3,7 +3,7 @@ import pickle
 import faiss
 from sentence_transformers import SentenceTransformer
 
-DATA_PATH = r"C:\Users\dell\Documents\Final_Govt_Schemes_Dataset.csv"
+DATA_PATH = "data/Final_Govt_Schemes_Dataset.csv"
 
 print("Loading dataset...")
 
@@ -38,18 +38,17 @@ index = faiss.IndexFlatIP(dimension)
 
 index.add(embeddings)
 
-faiss.write_index(
-    index,
-    r"C:\Users\dell\Documents\schemes_faiss.index"
+index = faiss.read_index(
+    "faiss_store/schemes_faiss.index"
 )
 
-df.to_pickle(
-    r"C:\Users\dell\Documents\schemes_data.pkl"
+df = pd.read_pickle(
+    "faiss_store/schemes_data.pkl"
 )
 
 with open(
-    r"C:\Users\dell\Documents\scheme_texts.pkl",
-    "wb"
+    "faiss_store/scheme_texts.pkl",
+    "rb"
 ) as f:
     pickle.dump(texts, f)
 
