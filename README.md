@@ -1,4 +1,4 @@
-# 🇮🇳 YojanaSetu AI
+# YojanaSetu AI
 
 An **AI-powered Government Scheme Recommendation System** built using **Retrieval-Augmented Generation (RAG)**. YojanaSetu enables users to discover relevant Indian government welfare schemes through natural language queries by combining **semantic search using SBERT**, **vector similarity search using FAISS**, and **Google Gemini** for intelligent, context-aware recommendations.
 
@@ -164,7 +164,7 @@ Based on your profile, PM-KISAN is the most suitable scheme for your needs.
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/<tisnoork45>/YojanaSetu-AI.git
+git clone https://github.com/tisnoork45/YojanaSetu-AI.git
 
 cd YojanaSetu-AI
 
