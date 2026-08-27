@@ -75,7 +75,6 @@ An **AI-powered Government Scheme Recommendation System** built using **Retrieva
 
 <p align="center">
   <img src="screenshots/screenshot_1.png" alt="Chatbot Interface" width="45%">
-  <img src="screenshots/screenshot_2.png" alt="Recommendation Example" width="45%">
 </p>
 
 ---
