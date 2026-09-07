@@ -264,35 +264,30 @@ This threshold is an operating point selected for the current evaluation dataset
 
 ---
 
-## 💬 Example Query
+## Example Query
 
 > I am a 35-year-old farmer from Punjab with an annual family income of ₹2 lakh. I need financial assistance for farming.
 
 ### Example Response
 
-Based on your profile, the following government schemes may be relevant:
+Based on your profile, these government schemes may be relevant:
 
-**1. PM-KISAN**
+**1. Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)**
 
-- Provides financial assistance to eligible farmers.
-- Your occupation matches the available eligibility information.
+- This scheme provides direct income support to farmer families, which can be helpful for your farming needs.
+- You could receive income support of ₹6,000 per year, disbursed in three equal installments.
 
-**2. AgriSURE Fund**
+**2. Kisan Credit Card (KCC)**
 
-- Relevant to agricultural and rural-sector needs.
+- Provides affordable short-term credit for agricultural and related activities.
+- May help with expenses such as crop cultivation and other farming needs.
 
-**3. Rashtriya Krishi Vikas Yojana**
+**3. Punjab Crop Residue Management / Farm Mechanization Support**
 
-- Relevant to agricultural development.
-- Some eligibility information is unavailable in the current dataset.
+- Provides support for eligible agricultural machinery and crop-residue-management activities in Punjab.
+- May be relevant if you are looking for assistance with farm machinery or residue-management equipment.
 
-**4. Agriculture Infrastructure Fund**
-
-- Relevant to agricultural infrastructure and related activities.
-- Eligibility may require additional verification.
-
-Please verify the latest eligibility criteria and application requirements from the official government sources before applying.
-
+Please verify the latest eligibility criteria, benefits, and application requirements on the official government portal before applying.
 ---
 
 ## 📦 Installation
