@@ -1,4 +1,18 @@
-__pycache__/
-.ipynb_checkpoints/
+# Virtual environment
+venv/
 .env
-.gradio/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Dataset
+data/*.csv
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

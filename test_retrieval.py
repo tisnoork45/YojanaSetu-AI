@@ -1,42 +1,44 @@
-import faiss
-import pandas as pd
-import pickle
 
-from sentence_transformers import SentenceTransformer
+import retrieval_pipeline as rp
 
-index = faiss.read_index(
-    "faiss_store/schemes_faiss.index"
-)
+def run_query(query, embedding_model, index, df, profile=None):
+    print("\n" + "=" * 60)
+    print(f"QUERY: {query}")
+    print("=" * 60)
 
-df = pd.read_pickle(
-    "faiss_store/schemes_data.pkl"
-)
+    candidates = rp.retrieve_candidates(query, embedding_model, index, df)
+    if not candidates:
+        print(rp.NO_MATCH_MESSAGE)
+        return
 
-model = SentenceTransformer(
-    "all-MiniLM-L6-v2"
-)
+    rp.attach_eligibility(candidates, profile or {})
+    recommended, not_eligible = rp.rank_candidates(candidates)
 
-def search_schemes(user_query, top_k=3):
+    for c in recommended:
+        print(f"\n{c['scheme_name']}  (similarity={c['_similarity']:.2f}, eligibility={c['_eligibility'].status})")
+        print(f"  Category: {c['category']}")
+        print(f"  {c['_eligibility'].summary}")
 
-    query_vector = model.encode(
-        [user_query],
-        normalize_embeddings=True
-    ).astype("float32")
+    if not_eligible:
+        print("\n-- relevant but not eligible --")
+        for c in not_eligible:
+            print(f"{c['scheme_name']}: {c['_eligibility'].summary}")
 
-    distances, indices = index.search(
-        query_vector,
-        top_k
-    )
 
-    for idx in indices[0]:
+if __name__ == "__main__":
+    try:
+        index, df, embedding_model = rp.load_resources()
+    except Exception as e:
+        raise SystemExit(
+            f"Could not load the FAISS store ({e}).\n"
+            "Build it first with:\n"
+            "    python data_cleaning.py\n"
+            "    python enrich_eligibility.py\n"
+            "    python build_index.py"
+        )
 
-        row = df.iloc[idx]
-
-        print("\n================")
-        print(row["scheme_name"])
-        print(row["category"])
-        print("================")
-
-search_schemes(
-    "I need money for my crops"
-)
+    run_query("I need money for my crops", embedding_model, index, df,
+              profile={"occupation": "farmer"})
+    run_query("I'm a 65 year old farmer looking for a pension", embedding_model, index, df,
+              profile={"age": 65, "occupation": "farmer"})
+    run_query("What's the weather like today?", embedding_model, index, df)

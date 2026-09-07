@@ -1,0 +1,1397 @@
+[
+  {
+    "id": "case_001",
+    "category": "general",
+    "query": "What government schemes exist for agriculture?",
+    "profile": {},
+    "expected_scheme": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "Category-level browse query, no personalization.",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "Need more information: occupation"
+  },
+  {
+    "id": "case_002",
+    "category": "general",
+    "query": "Tell me about health schemes available in India.",
+    "profile": {},
+    "expected_scheme": "Ayushman Bharat (PM-JAY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "Category-level browse query, no personalization.",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "No structured eligibility criteria available for this scheme in our dataset."
+  },
+  {
+    "id": "case_003",
+    "category": "general",
+    "query": "What schemes are available for rural development?",
+    "profile": {},
+    "expected_scheme": "Pradhan Mantri Gram Sadak Yojana(PMGSY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "Category-level browse query, no personalization.",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "Need more information: rural_urban"
+  },
+  {
+    "id": "case_004",
+    "category": "general",
+    "query": "Are there any schemes related to education?",
+    "profile": {},
+    "expected_scheme": "PM-SHRI Scheme",
+    "expected_behavior": "RETRIEVE",
+    "notes": "Category-level browse query, no personalization.",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "Need more information: education"
+  },
+  {
+    "id": "case_005",
+    "category": "general",
+    "query": "What skill development schemes does the government offer?",
+    "profile": {},
+    "expected_scheme": "Pradhan Mantri Kaushal Vikas Yojana(PMKVY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "Category-level browse query, no personalization.",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "No structured eligibility criteria available for this scheme in our dataset."
+  },
+  {
+    "id": "case_006",
+    "category": "general",
+    "query": "Tell me about pension schemes for Indian citizens.",
+    "profile": {},
+    "expected_scheme": "Atal Pension Yojana (APY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "Category-level browse query, no personalization.",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "Need more information: occupation"
+  },
+  {
+    "id": "case_007",
+    "category": "general",
+    "query": "What housing schemes are available?",
+    "profile": {},
+    "expected_scheme": "Pradhan Mantri Awas Yojana(PMAY",
+    "expected_behavior": "RETRIEVE",
+    "notes": "Category-level browse query, no personalization.",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "No structured eligibility criteria available for this scheme in our dataset."
+  },
+  {
+    "id": "case_008",
+    "category": "general",
+    "query": "What schemes exist for water and sanitation?",
+    "profile": {},
+    "expected_scheme": "Jal Jeevan Mission(JJM",
+    "expected_behavior": "RETRIEVE",
+    "notes": "Category-level browse query, no personalization.",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "Need more information: rural_urban"
+  },
+  {
+    "id": "case_009",
+    "category": "personalized",
+    "query": "I'm a farmer looking for crop insurance.",
+    "profile": {
+      "occupation": "farmer",
+      "state": "Maharashtra",
+      "intent": "agriculture"
+    },
+    "expected_scheme": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'farmer' matches the requirement 'Farmer'."
+  },
+  {
+    "id": "case_010",
+    "category": "personalized",
+    "query": "I run a small shop and need a business loan.",
+    "profile": {
+      "occupation": "entrepreneur",
+      "state": "Gujarat",
+      "intent": "business"
+    },
+    "expected_scheme": "Pradhan Mantri Mudra Yojana (PMMY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "No structured eligibility criteria available for this scheme in our dataset."
+  },
+  {
+    "id": "case_011",
+    "category": "personalized",
+    "query": "I'm a street vendor and need working capital.",
+    "profile": {
+      "occupation": "street vendor",
+      "state": "Delhi",
+      "intent": "business"
+    },
+    "expected_scheme": "PM SVANidhi",
+    "expected_behavior": "RETRIEVE",
+    "notes": "",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'street vendor' matches the requirement 'Street Vendor'."
+  },
+  {
+    "id": "case_012",
+    "category": "personalized",
+    "query": "I want free skill training to get a job.",
+    "profile": {
+      "age": 24,
+      "education": "school education",
+      "intent": "employment_skill"
+    },
+    "expected_scheme": "Pradhan Mantri Kaushal Vikas Yojana(PMKVY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "No structured eligibility criteria available for this scheme in our dataset."
+  },
+  {
+    "id": "case_013",
+    "category": "personalized",
+    "query": "I'm part of a self-help group and want to increase our income.",
+    "profile": {
+      "occupation": "self-help group member",
+      "state": "Bihar",
+      "intent": "business"
+    },
+    "expected_scheme": "Lakhpati Didi Scheme",
+    "expected_behavior": "RETRIEVE",
+    "notes": "",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "Need more information: gender, rural_urban"
+  },
+  {
+    "id": "case_014",
+    "category": "personalized",
+    "query": "I'm an unorganised sector worker worried about my pension.",
+    "profile": {
+      "occupation": "unorganised sector worker",
+      "age": 30,
+      "intent": "pension"
+    },
+    "expected_scheme": "Atal Pension Yojana (APY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'unorganised sector worker' matches the requirement 'Unorganised Sector Worker'."
+  },
+  {
+    "id": "case_015",
+    "category": "personalized",
+    "query": "I'm a government employee planning for retirement.",
+    "profile": {
+      "occupation": "government employee",
+      "intent": "pension"
+    },
+    "expected_scheme": "Unified Pension Scheme (UPS)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'government employee' matches the requirement 'Government Employee'."
+  },
+  {
+    "id": "case_016",
+    "category": "personalized",
+    "query": "I'm an artisan and want support for my craft business.",
+    "profile": {
+      "occupation": "artisan",
+      "intent": "business"
+    },
+    "expected_scheme": "PM Vishwakarma Scheme",
+    "expected_behavior": "RETRIEVE",
+    "notes": "",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'artisan' matches the requirement 'Artisan/Craftsperson'."
+  },
+  {
+    "id": "case_017",
+    "category": "age_specific",
+    "query": "I'm 65 and a small farmer. Is there a pension scheme for me?",
+    "profile": {
+      "age": 65,
+      "occupation": "farmer"
+    },
+    "expected_scheme": "Pradhan Mantri Kisan Maandhan Yojana (PM-KMY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "age 65 >= min_age 60 -> eligible on age",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Age 65 satisfies the required age (at least 60).; Occupation 'farmer' matches the requirement 'Farmer'."
+  },
+  {
+    "id": "case_018",
+    "category": "age_specific",
+    "query": "I'm 25 and work as a small farmer, can I get the farmer pension now?",
+    "profile": {
+      "age": 25,
+      "occupation": "farmer"
+    },
+    "expected_scheme": "Pradhan Mantri Kisan Maandhan Yojana (PM-KMY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "age 25 < min_age 60 -> not eligible on age",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Age 25 is below the minimum required age of 60."
+  },
+  {
+    "id": "case_019",
+    "category": "age_specific",
+    "query": "My newborn needs the government child development program, what's available?",
+    "profile": {
+      "age": 2
+    },
+    "expected_scheme": "Integrated Child Development Services(ICDS",
+    "expected_behavior": "RETRIEVE",
+    "notes": "age 2 within 0-6 -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Age 2 satisfies the required age (at least 0 and at most 6)."
+  },
+  {
+    "id": "case_020",
+    "category": "age_specific",
+    "query": "Is the anganwadi child development scheme relevant for a 10 year old?",
+    "profile": {
+      "age": 10
+    },
+    "expected_scheme": "Integrated Child Development Services(ICDS",
+    "expected_behavior": "RETRIEVE",
+    "notes": "age 10 > max_age 6 -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Age 10 is above the maximum allowed age of 6."
+  },
+  {
+    "id": "case_021",
+    "category": "age_specific",
+    "query": "My 15 year old needs the child health screening program, can they use it?",
+    "profile": {
+      "age": 15
+    },
+    "expected_scheme": "Rashtriya Bal Swasthya Karyakram(RBSK)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "age 15 within 0-18 -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Age 15 satisfies the required age (at least 0 and at most 18)."
+  },
+  {
+    "id": "case_022",
+    "category": "age_specific",
+    "query": "Can a 20 year old still use the child health screening program?",
+    "profile": {
+      "age": 20
+    },
+    "expected_scheme": "Rashtriya Bal Swasthya Karyakram(RBSK)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "age 20 > max_age 18 -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Age 20 is above the maximum allowed age of 18."
+  },
+  {
+    "id": "case_023",
+    "category": "age_specific",
+    "query": "My child is 10, can they open an NPS Vatsalya pension account?",
+    "profile": {
+      "age": 10
+    },
+    "expected_scheme": "NPS Vatsalya",
+    "expected_behavior": "RETRIEVE",
+    "notes": "age 10 <= max_age 18 -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Age 10 satisfies the required age (at most 18)."
+  },
+  {
+    "id": "case_024",
+    "category": "age_specific",
+    "query": "I'm 40, can I open an NPS Vatsalya account meant for my kid?",
+    "profile": {
+      "age": 40
+    },
+    "expected_scheme": "NPS Vatsalya",
+    "expected_behavior": "RETRIEVE",
+    "notes": "age 40 > max_age 18 -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Age 40 is above the maximum allowed age of 18."
+  },
+  {
+    "id": "case_025",
+    "category": "gender_specific",
+    "query": "I'm part of a women's self-help group interested in the drone scheme.",
+    "profile": {
+      "gender": "female"
+    },
+    "expected_scheme": "NAMO DRONE DIDI SCHEME",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=female matches -> eligible on gender dimension",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "Need more information: occupation"
+  },
+  {
+    "id": "case_026",
+    "category": "gender_specific",
+    "query": "My friend is part of a women's self-help group interested in the drone scheme.",
+    "profile": {
+      "gender": "male"
+    },
+    "expected_scheme": "NAMO DRONE DIDI SCHEME",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=male mismatches Female-only scheme -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'male' does not match the requirement 'Female'."
+  },
+  {
+    "id": "case_027",
+    "category": "gender_specific",
+    "query": "I'm a pregnant woman looking for institutional delivery support.",
+    "profile": {
+      "gender": "female"
+    },
+    "expected_scheme": "Janani Suraksha Yojana(JSY",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=female matches -> eligible on gender dimension",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'female' matches the requirement 'Female'."
+  },
+  {
+    "id": "case_028",
+    "category": "gender_specific",
+    "query": "My friend is a pregnant woman looking for institutional delivery support.",
+    "profile": {
+      "gender": "male"
+    },
+    "expected_scheme": "Janani Suraksha Yojana(JSY",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=male mismatches Female-only scheme -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'male' does not match the requirement 'Female'."
+  },
+  {
+    "id": "case_029",
+    "category": "gender_specific",
+    "query": "I'm expecting and want free maternal healthcare at a government hospital.",
+    "profile": {
+      "gender": "female"
+    },
+    "expected_scheme": "SUMAN (Surakshit Matritva Aashwasan)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=female matches -> eligible on gender dimension",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'female' matches the requirement 'Female'."
+  },
+  {
+    "id": "case_030",
+    "category": "gender_specific",
+    "query": "My friend is expecting and want free maternal healthcare at a government hospital.",
+    "profile": {
+      "gender": "male"
+    },
+    "expected_scheme": "SUMAN (Surakshit Matritva Aashwasan)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=male mismatches Female-only scheme -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'male' does not match the requirement 'Female'."
+  },
+  {
+    "id": "case_031",
+    "category": "gender_specific",
+    "query": "Is there a scheme focused on women's safety and empowerment?",
+    "profile": {
+      "gender": "female"
+    },
+    "expected_scheme": "Mission Shakti (Mission for Empowerment and Protection of Wo",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=female matches -> eligible on gender dimension",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'female' matches the requirement 'Female'."
+  },
+  {
+    "id": "case_032",
+    "category": "gender_specific",
+    "query": "Is there a scheme focused on women's safety and empowerment?",
+    "profile": {
+      "gender": "male"
+    },
+    "expected_scheme": "Mission Shakti (Mission for Empowerment and Protection of Wo",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=male mismatches Female-only scheme -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'male' does not match the requirement 'Female'."
+  },
+  {
+    "id": "case_033",
+    "category": "gender_specific",
+    "query": "Is there a scheme to support the girl child's welfare?",
+    "profile": {
+      "gender": "female"
+    },
+    "expected_scheme": "Beti Bachao Beti Padhao(BBBP",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=female matches -> eligible on gender dimension",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'female' matches the requirement 'Female'."
+  },
+  {
+    "id": "case_034",
+    "category": "gender_specific",
+    "query": "Is there a scheme to support the girl child's welfare?",
+    "profile": {
+      "gender": "male"
+    },
+    "expected_scheme": "Beti Bachao Beti Padhao(BBBP",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=male mismatches Female-only scheme -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'male' does not match the requirement 'Female'."
+  },
+  {
+    "id": "case_035",
+    "category": "gender_specific",
+    "query": "I want to open a small savings account for my daughter.",
+    "profile": {
+      "gender": "female"
+    },
+    "expected_scheme": "Sukanya Samriddhi Yojana(SSY",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=female matches -> eligible on gender dimension",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'female' matches the requirement 'Female'."
+  },
+  {
+    "id": "case_036",
+    "category": "gender_specific",
+    "query": "My friend wants to open a small savings account for my daughter.",
+    "profile": {
+      "gender": "male"
+    },
+    "expected_scheme": "Sukanya Samriddhi Yojana(SSY",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=male mismatches Female-only scheme -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'male' does not match the requirement 'Female'."
+  },
+  {
+    "id": "case_037",
+    "category": "gender_specific",
+    "query": "I'm a rural woman in a self-help group wanting to grow our income.",
+    "profile": {
+      "gender": "female"
+    },
+    "expected_scheme": "Lakhpati Didi Scheme",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=female matches -> eligible on gender dimension",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "Need more information: rural_urban, occupation"
+  },
+  {
+    "id": "case_038",
+    "category": "gender_specific",
+    "query": "My friend is a rural woman in a self-help group wanting to grow our income.",
+    "profile": {
+      "gender": "male"
+    },
+    "expected_scheme": "Lakhpati Didi Scheme",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=male mismatches Female-only scheme -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'male' does not match the requirement 'Female'."
+  },
+  {
+    "id": "case_039",
+    "category": "gender_specific",
+    "query": "Is there a residential school scheme for girls from poor families?",
+    "profile": {
+      "gender": "female"
+    },
+    "expected_scheme": "Kasturba Gandhi Balika Vidyalaya",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=female matches -> eligible on gender dimension",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "Need more information: social_category, education"
+  },
+  {
+    "id": "case_040",
+    "category": "gender_specific",
+    "query": "Is there a residential school scheme for girls from poor families?",
+    "profile": {
+      "gender": "male"
+    },
+    "expected_scheme": "Kasturba Gandhi Balika Vidyalaya",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender=male mismatches Female-only scheme -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'male' does not match the requirement 'Female'."
+  },
+  {
+    "id": "case_041",
+    "category": "income_specific",
+    "query": "My family income is very low, around 80,000 a year. Is there an LPG subsidy for us?",
+    "profile": {
+      "income": 80000,
+      "social_category": "bpl"
+    },
+    "expected_scheme": "Pradhan Mantri Ujjwala Yojana(PMUY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "social_category matches BPL/EWS -> eligible; income itself is NOT_APPLICABLE (no numeric limit in data)",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Social category 'bpl' matches the requirement 'BPL/EWS'."
+  },
+  {
+    "id": "case_042",
+    "category": "income_specific",
+    "query": "We're a general-category family with a comfortable income. Can we get the LPG subsidy scheme meant for poor households?",
+    "profile": {
+      "income": 1200000,
+      "social_category": "general"
+    },
+    "expected_scheme": "Pradhan Mantri Ujjwala Yojana(PMUY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "social_category mismatch (General vs BPL/EWS) -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Social category 'general' does not match the requirement 'BPL/EWS'."
+  },
+  {
+    "id": "case_043",
+    "category": "income_specific",
+    "query": "My rural family earns about 1.5 lakh a year, are we eligible for the rural skills program targeted at poor households?",
+    "profile": {
+      "income": 150000,
+      "social_category": "bpl",
+      "rural_urban": "rural"
+    },
+    "expected_scheme": "Deendayal Upadhyaya Grameen Kaushalya Yojana(DDU)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "BPL matches BPL/EWS and rural matches Rural -> eligible; income NOT_APPLICABLE",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Rural/urban 'rural' matches the requirement 'Rural'.; Social category 'bpl' matches the requirement 'SC/ST/BPL/EWS'."
+  },
+  {
+    "id": "case_044",
+    "category": "income_specific",
+    "query": "I have a high income and want to know if the girls' residential school scheme for poor families applies to us.",
+    "profile": {
+      "income": 2000000,
+      "social_category": "general"
+    },
+    "expected_scheme": "Kasturba Gandhi Balika Vidyalaya",
+    "expected_behavior": "RETRIEVE",
+    "notes": "social_category mismatch -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Social category 'general' does not match the requirement 'SC/ST/OBC/Minority/BPL/EWS'."
+  },
+  {
+    "id": "case_045",
+    "category": "income_specific",
+    "query": "My family's annual income is about 3 lakh, can I get support under PM-KISAN?",
+    "profile": {
+      "income": 300000,
+      "occupation": "farmer"
+    },
+    "expected_scheme": "PM KISAN SAMMAN NIDHI (PM-KISAN)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "PM-KISAN has occupation=Farmer in our data (matches) but no income criteria (NOT_APPLICABLE) -> eligible on occupation",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'farmer' matches the requirement 'Farmer'."
+  },
+  {
+    "id": "case_046",
+    "category": "state_specific",
+    "query": "I'm a young person from the North East looking for livelihood support.",
+    "profile": {
+      "state": "North Eastern States",
+      "intent": "employment_skill"
+    },
+    "expected_scheme": "PM-DEVINE",
+    "expected_behavior": "RETRIEVE",
+    "notes": "state matches North Eastern States -> eligible on state",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "State 'North Eastern States' matches the requirement 'North Eastern States'."
+  },
+  {
+    "id": "case_047",
+    "category": "state_specific",
+    "query": "I live in Kerala, is the North-East livelihood scheme relevant to me?",
+    "profile": {
+      "state": "Kerala"
+    },
+    "expected_scheme": "PM-DEVINE",
+    "expected_behavior": "RETRIEVE",
+    "notes": "state mismatch -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "State 'Kerala' does not match the requirement 'North Eastern States'."
+  },
+  {
+    "id": "case_048",
+    "category": "state_specific",
+    "query": "I'm from Assam and want to know about industrialisation support in the North East.",
+    "profile": {
+      "state": "North Eastern States"
+    },
+    "expected_scheme": "UTTAR POORVA TRANSFORMATIVE INDUSTRIALIZATION \nSCHEME (UNNATI)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "state matches -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "State 'North Eastern States' matches the requirement 'North Eastern States'."
+  },
+  {
+    "id": "case_049",
+    "category": "state_specific",
+    "query": "Does the PM-KISAN scheme have any specific state restriction?",
+    "profile": {
+      "state": "Tamil Nadu",
+      "occupation": "farmer"
+    },
+    "expected_scheme": "PM KISAN SAMMAN NIDHI (PM-KISAN)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "no state field set on this scheme -> NOT_APPLICABLE, still UNKNOWN overall (no criteria at all)",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'farmer' matches the requirement 'Farmer'."
+  },
+  {
+    "id": "case_050",
+    "category": "social_category",
+    "query": "I belong to the SC community and my family is below the poverty line, is there a rural skills scheme for us?",
+    "profile": {
+      "social_category": "sc",
+      "rural_urban": "rural"
+    },
+    "expected_scheme": "Deendayal Upadhyaya Grameen Kaushalya Yojana(DDU)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "SC is in the allowed set SC/ST/BPL/EWS and rural matches Rural -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Rural/urban 'rural' matches the requirement 'Rural'.; Social category 'sc' matches the requirement 'SC/ST/BPL/EWS'."
+  },
+  {
+    "id": "case_051",
+    "category": "social_category",
+    "query": "I'm from a general category, well-off family. Is the rural skills scheme for BPL/SC/ST youth open to us too?",
+    "profile": {
+      "social_category": "general"
+    },
+    "expected_scheme": "Deendayal Upadhyaya Grameen Kaushalya Yojana(DDU)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "General not in allowed set -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Social category 'general' does not match the requirement 'SC/ST/BPL/EWS'."
+  },
+  {
+    "id": "case_052",
+    "category": "social_category",
+    "query": "My daughter is from an OBC family below the poverty line, can she join the girls' residential school scheme?",
+    "profile": {
+      "social_category": "obc",
+      "gender": "female",
+      "education": "school education"
+    },
+    "expected_scheme": "Kasturba Gandhi Balika Vidyalaya",
+    "expected_behavior": "RETRIEVE",
+    "notes": "OBC is in the allowed set, gender/education also match -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'female' matches the requirement 'Female'.; Social category 'obc' matches the requirement 'SC/ST/OBC/Minority/BPL/EWS'.; Education level 'school education' matches the requirement 'School Education'."
+  },
+  {
+    "id": "case_053",
+    "category": "social_category",
+    "query": "We're a minority community family, can we get the LPG connection scheme meant for BPL households?",
+    "profile": {
+      "social_category": "minority"
+    },
+    "expected_scheme": "Pradhan Mantri Ujjwala Yojana(PMUY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "scheme's category set is BPL/EWS only -> Minority alone does not match -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Social category 'minority' does not match the requirement 'BPL/EWS'."
+  },
+  {
+    "id": "case_054",
+    "category": "education_occupation",
+    "query": "I've finished 12th grade and want a loan for a top university abroad.",
+    "profile": {
+      "education": "higher education",
+      "occupation": "student"
+    },
+    "expected_scheme": "PM Vidyalaxmi Scheme",
+    "expected_behavior": "RETRIEVE",
+    "notes": "occupation=student matches -> eligible on occupation; education not a stated requirement on this scheme",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'student' matches the requirement 'Student'.; Education level 'higher education' matches the requirement 'Higher Education'."
+  },
+  {
+    "id": "case_055",
+    "category": "education_occupation",
+    "query": "I'm a working professional, not a student, can I still get the education loan scheme meant for students?",
+    "profile": {
+      "occupation": "government employee"
+    },
+    "expected_scheme": "PM Vidyalaxmi Scheme",
+    "expected_behavior": "RETRIEVE",
+    "notes": "occupation mismatch -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'government employee' does not match the requirement 'Student'."
+  },
+  {
+    "id": "case_056",
+    "category": "education_occupation",
+    "query": "I'm in class 10 and interested in the leadership program for classes 9-12.",
+    "profile": {
+      "age": 15
+    },
+    "expected_scheme": "Prerana",
+    "expected_behavior": "RETRIEVE",
+    "notes": "Prerana has occupation=Student but not age criteria -> occupation unknown here -> UNKNOWN",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "Need more information: occupation"
+  },
+  {
+    "id": "case_057",
+    "category": "education_occupation",
+    "query": "I'm a farmer wanting to check my soil quality through a government scheme.",
+    "profile": {
+      "occupation": "farmer"
+    },
+    "expected_scheme": "Soil Health Card Scheme",
+    "expected_behavior": "RETRIEVE",
+    "notes": "occupation matches -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'farmer' matches the requirement 'Farmer'."
+  },
+  {
+    "id": "case_058",
+    "category": "education_occupation",
+    "query": "I'm a student, not a farmer -- is the soil health card scheme still useful for me directly?",
+    "profile": {
+      "occupation": "student"
+    },
+    "expected_scheme": "Soil Health Card Scheme",
+    "expected_behavior": "RETRIEVE",
+    "notes": "occupation mismatch -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'student' does not match the requirement 'Farmer'."
+  },
+  {
+    "id": "case_059",
+    "category": "eligible",
+    "query": "I'm an artisan making handicrafts and want government recognition and support.",
+    "profile": {
+      "occupation": "artisan"
+    },
+    "expected_scheme": "PM Vishwakarma Scheme",
+    "expected_behavior": "RETRIEVE",
+    "notes": "occupation matches -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'artisan' matches the requirement 'Artisan/Craftsperson'."
+  },
+  {
+    "id": "case_060",
+    "category": "eligible",
+    "query": "I'm a woman running a small self-help group business, want to grow to a lakh a year.",
+    "profile": {
+      "occupation": "self-help group member",
+      "gender": "female"
+    },
+    "expected_scheme": "NAMO DRONE DIDI SCHEME",
+    "expected_behavior": "RETRIEVE",
+    "notes": "occupation matches SHG, gender matches Female -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'female' matches the requirement 'Female'.; Occupation 'self-help group member' matches the requirement 'Self-Help Group member'."
+  },
+  {
+    "id": "case_061",
+    "category": "eligible",
+    "query": "I'm 62 years old and a small farmer, can I join the pension scheme?",
+    "profile": {
+      "age": 62,
+      "occupation": "farmer"
+    },
+    "expected_scheme": "Pradhan Mantri Kisan Maandhan Yojana (PM-KMY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "both age and occupation match -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Age 62 satisfies the required age (at least 60).; Occupation 'farmer' matches the requirement 'Farmer'."
+  },
+  {
+    "id": "case_062",
+    "category": "ineligible",
+    "query": "I'm a 19 year old wanting to join the small farmer pension scheme.",
+    "profile": {
+      "age": 19,
+      "occupation": "farmer"
+    },
+    "expected_scheme": "Pradhan Mantri Kisan Maandhan Yojana (PM-KMY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "age fails (< 60) -> not eligible even though occupation matches",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Age 19 is below the minimum required age of 60."
+  },
+  {
+    "id": "case_063",
+    "category": "ineligible",
+    "query": "I'm a 30 year old man, can I benefit from the girl child savings scheme directly?",
+    "profile": {
+      "age": 30,
+      "gender": "male"
+    },
+    "expected_scheme": "Sukanya Samriddhi Yojana(SSY",
+    "expected_behavior": "RETRIEVE",
+    "notes": "gender fails -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Gender 'male' does not match the requirement 'Female'."
+  },
+  {
+    "id": "case_064",
+    "category": "ineligible",
+    "query": "My child is 8 years old, can they still join the 0-6 age group nutrition scheme?",
+    "profile": {
+      "age": 8
+    },
+    "expected_scheme": "Integrated Child Development Services(ICDS",
+    "expected_behavior": "RETRIEVE",
+    "notes": "age fails (> 6) -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Age 8 is above the maximum allowed age of 6."
+  },
+  {
+    "id": "case_065",
+    "category": "missing_information",
+    "query": "I need a scholarship.",
+    "profile": {},
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "Intent-relevant profile fields are all missing -> system should ask a targeted follow-up, not assume values.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_066",
+    "category": "missing_information",
+    "query": "I want health insurance for my family.",
+    "profile": {},
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "Intent-relevant profile fields are all missing -> system should ask a targeted follow-up, not assume values.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_067",
+    "category": "missing_information",
+    "query": "I'm looking for a pension scheme.",
+    "profile": {},
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "Intent-relevant profile fields are all missing -> system should ask a targeted follow-up, not assume values.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_068",
+    "category": "missing_information",
+    "query": "I need a loan to start a business.",
+    "profile": {},
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "Intent-relevant profile fields are all missing -> system should ask a targeted follow-up, not assume values.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_069",
+    "category": "missing_information",
+    "query": "Can you help me find a housing scheme?",
+    "profile": {},
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "Intent-relevant profile fields are all missing -> system should ask a targeted follow-up, not assume values.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_070",
+    "category": "missing_information",
+    "query": "I want to know about food security schemes for my family.",
+    "profile": {},
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "Intent-relevant profile fields are all missing -> system should ask a targeted follow-up, not assume values.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_071",
+    "category": "missing_information",
+    "query": "Is there a scheme to support women's self-help groups?",
+    "profile": {},
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "Intent-relevant profile fields are all missing -> system should ask a targeted follow-up, not assume values.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_072",
+    "category": "missing_information",
+    "query": "I need financial help, what schemes can I get?",
+    "profile": {},
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "Intent-relevant profile fields are all missing -> system should ask a targeted follow-up, not assume values.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_073",
+    "category": "missing_information",
+    "query": "I'm 22 and from Punjab, and I need a scholarship.",
+    "profile": {
+      "age": 22,
+      "state": "Punjab",
+      "intent": "education"
+    },
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "age/state known but income & education still missing for the 'education' intent -> should ask only for those, not re-ask age/state.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_074",
+    "category": "missing_information",
+    "query": "I'm a farmer from Maharashtra needing crop insurance.",
+    "profile": {
+      "occupation": "farmer",
+      "state": "Maharashtra",
+      "intent": "agriculture"
+    },
+    "expected_scheme": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "occupation & state (the only two fields 'agriculture' intent needs) are both known -> should proceed to retrieval, not ask again.",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'farmer' matches the requirement 'Farmer'."
+  },
+  {
+    "id": "case_075",
+    "category": "ambiguous",
+    "query": "I need help.",
+    "profile": {},
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "Too vague to identify a specific intent -> falls back to 'general' intent, which still asks for at least a state/area of interest.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_076",
+    "category": "ambiguous",
+    "query": "What can you do for me?",
+    "profile": {},
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "Too vague to identify a specific intent -> falls back to 'general' intent, which still asks for at least a state/area of interest.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_077",
+    "category": "ambiguous",
+    "query": "Tell me something useful.",
+    "profile": {},
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "Too vague to identify a specific intent -> falls back to 'general' intent, which still asks for at least a state/area of interest.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_078",
+    "category": "ambiguous",
+    "query": "I'm not sure what I'm looking for.",
+    "profile": {},
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "Too vague to identify a specific intent -> falls back to 'general' intent, which still asks for at least a state/area of interest.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_079",
+    "category": "no_match",
+    "query": "Tell me a joke.",
+    "profile": {
+      "state": "Delhi",
+      "age": 30,
+      "occupation": "student",
+      "income": 500000,
+      "education": "higher education"
+    },
+    "expected_scheme": null,
+    "expected_behavior": "NO_MATCH",
+    "notes": "Profile fully specified (so it won't trip ASK_FOR_INFORMATION) and query is unrelated to any government scheme -> every FAISS candidate should fall below the similarity threshold.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_080",
+    "category": "no_match",
+    "query": "What's the weather like today?",
+    "profile": {
+      "state": "Delhi",
+      "age": 30,
+      "occupation": "student",
+      "income": 500000,
+      "education": "higher education"
+    },
+    "expected_scheme": null,
+    "expected_behavior": "NO_MATCH",
+    "notes": "Profile fully specified (so it won't trip ASK_FOR_INFORMATION) and query is unrelated to any government scheme -> every FAISS candidate should fall below the similarity threshold.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_081",
+    "category": "no_match",
+    "query": "Who won the cricket match yesterday?",
+    "profile": {
+      "state": "Delhi",
+      "age": 30,
+      "occupation": "student",
+      "income": 500000,
+      "education": "higher education"
+    },
+    "expected_scheme": null,
+    "expected_behavior": "NO_MATCH",
+    "notes": "Profile fully specified (so it won't trip ASK_FOR_INFORMATION) and query is unrelated to any government scheme -> every FAISS candidate should fall below the similarity threshold.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_082",
+    "category": "no_match",
+    "query": "Can you write a poem about the ocean?",
+    "profile": {
+      "state": "Delhi",
+      "age": 30,
+      "occupation": "student",
+      "income": 500000,
+      "education": "higher education"
+    },
+    "expected_scheme": null,
+    "expected_behavior": "NO_MATCH",
+    "notes": "Profile fully specified (so it won't trip ASK_FOR_INFORMATION) and query is unrelated to any government scheme -> every FAISS candidate should fall below the similarity threshold.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_083",
+    "category": "no_match",
+    "query": "What's the capital of France?",
+    "profile": {
+      "state": "Delhi",
+      "age": 30,
+      "occupation": "student",
+      "income": 500000,
+      "education": "higher education"
+    },
+    "expected_scheme": null,
+    "expected_behavior": "NO_MATCH",
+    "notes": "Profile fully specified (so it won't trip ASK_FOR_INFORMATION) and query is unrelated to any government scheme -> every FAISS candidate should fall below the similarity threshold.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_084",
+    "category": "no_match",
+    "query": "Recommend me a movie to watch tonight.",
+    "profile": {
+      "state": "Delhi",
+      "age": 30,
+      "occupation": "student",
+      "income": 500000,
+      "education": "higher education"
+    },
+    "expected_scheme": null,
+    "expected_behavior": "NO_MATCH",
+    "notes": "Profile fully specified (so it won't trip ASK_FOR_INFORMATION) and query is unrelated to any government scheme -> every FAISS candidate should fall below the similarity threshold.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_085",
+    "category": "general",
+    "query": "What schemes support urban infrastructure development?",
+    "profile": {},
+    "expected_scheme": "Smart Cities Mission",
+    "expected_behavior": "RETRIEVE",
+    "notes": "Category-level browse query, no personalization.",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "Need more information: rural_urban"
+  },
+  {
+    "id": "case_086",
+    "category": "general",
+    "query": "Are there any schemes for road connectivity in villages?",
+    "profile": {},
+    "expected_scheme": "Rashtriya Gram Swaraj Abhiyan(RGSA )",
+    "expected_behavior": "RETRIEVE",
+    "notes": "Category-level browse query, no personalization.",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "Need more information: rural_urban"
+  },
+  {
+    "id": "case_087",
+    "category": "general",
+    "query": "What food security schemes exist for poor households?",
+    "profile": {},
+    "expected_scheme": "Antyodaya Anna Yojana(AAY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "Category-level browse query, no personalization.",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "No structured eligibility criteria available for this scheme in our dataset."
+  },
+  {
+    "id": "case_088",
+    "category": "general",
+    "query": "Tell me about digital connectivity schemes.",
+    "profile": {},
+    "expected_scheme": "PM-WANI",
+    "expected_behavior": "RETRIEVE",
+    "notes": "Category-level browse query, no personalization.",
+    "expected_eligibility": "UNKNOWN",
+    "relevant_eligibility_conditions": "Need more information: rural_urban"
+  },
+  {
+    "id": "case_089",
+    "category": "rural_urban",
+    "query": "I live in a city and want to know about the urban transformation scheme for better services.",
+    "profile": {
+      "rural_urban": "urban"
+    },
+    "expected_scheme": "Atal Mission for Rejuvenation and Urban Transformation(AMRUT)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "rural_urban matches Urban -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Rural/urban 'urban' matches the requirement 'Urban'."
+  },
+  {
+    "id": "case_090",
+    "category": "rural_urban",
+    "query": "I live in a village, is the urban transformation scheme relevant to me?",
+    "profile": {
+      "rural_urban": "rural"
+    },
+    "expected_scheme": "Atal Mission for Rejuvenation and Urban Transformation(AMRUT)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "rural_urban mismatch (rural vs Urban) -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Rural/urban 'rural' does not match the requirement 'Urban'."
+  },
+  {
+    "id": "case_091",
+    "category": "rural_urban",
+    "query": "I'm from a rural household and want guaranteed wage employment support.",
+    "profile": {
+      "rural_urban": "rural"
+    },
+    "expected_scheme": "Mahatma Gandhi National Rural Employment Guarantee Act(MGNREGA",
+    "expected_behavior": "RETRIEVE",
+    "notes": "rural_urban matches Rural -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Rural/urban 'rural' matches the requirement 'Rural'."
+  },
+  {
+    "id": "case_092",
+    "category": "rural_urban",
+    "query": "I live in a city, can I get the rural employment guarantee scheme meant for villages?",
+    "profile": {
+      "rural_urban": "urban"
+    },
+    "expected_scheme": "Mahatma Gandhi National Rural Employment Guarantee Act(MGNREGA",
+    "expected_behavior": "RETRIEVE",
+    "notes": "rural_urban mismatch (urban vs Rural) -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Rural/urban 'urban' does not match the requirement 'Rural'."
+  },
+  {
+    "id": "case_093",
+    "category": "education_occupation",
+    "query": "I'm a government employee and want to know about the National Pension System.",
+    "profile": {
+      "occupation": "government employee"
+    },
+    "expected_scheme": "National Pension System 2004",
+    "expected_behavior": "RETRIEVE",
+    "notes": "occupation matches -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'government employee' matches the requirement 'Government Employee'."
+  },
+  {
+    "id": "case_094",
+    "category": "education_occupation",
+    "query": "I'm self-employed, does the government-employee pension system apply to me?",
+    "profile": {
+      "occupation": "self-employed"
+    },
+    "expected_scheme": "National Pension System 2004",
+    "expected_behavior": "RETRIEVE",
+    "notes": "occupation mismatch -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'self-employed' does not match the requirement 'Government Employee'."
+  },
+  {
+    "id": "case_095",
+    "category": "education_occupation",
+    "query": "I work in the unorganised sector and want a low-cost pension plan.",
+    "profile": {
+      "occupation": "unorganised sector worker"
+    },
+    "expected_scheme": "Atal Pension Yojana(APY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "occupation matches -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'unorganised sector worker' matches the requirement 'Unorganised Sector Worker'."
+  },
+  {
+    "id": "case_096",
+    "category": "education_occupation",
+    "query": "I'm a salaried government employee, is the unorganised-sector pension scheme meant for me?",
+    "profile": {
+      "occupation": "government employee"
+    },
+    "expected_scheme": "Atal Pension Yojana(APY)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "occupation mismatch -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'government employee' does not match the requirement 'Unorganised Sector Worker'."
+  },
+  {
+    "id": "case_097",
+    "category": "personalized",
+    "query": "I stay in a village and need help with clean drinking water access.",
+    "profile": {
+      "rural_urban": "rural",
+      "intent": "food_security"
+    },
+    "expected_scheme": "Jal Jeevan Mission(JJM",
+    "expected_behavior": "RETRIEVE",
+    "notes": "rural matches -> eligible on rural_urban",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Rural/urban 'rural' matches the requirement 'Rural'."
+  },
+  {
+    "id": "case_098",
+    "category": "personalized",
+    "query": "I'm from a well-off urban family, is the rural piped water mission for us too?",
+    "profile": {
+      "rural_urban": "urban"
+    },
+    "expected_scheme": "Jal Jeevan Mission(JJM",
+    "expected_behavior": "RETRIEVE",
+    "notes": "rural_urban mismatch -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Rural/urban 'urban' does not match the requirement 'Rural'."
+  },
+  {
+    "id": "case_099",
+    "category": "eligible",
+    "query": "I'm a government employee with 25+ years of service planning retirement.",
+    "profile": {
+      "occupation": "government employee"
+    },
+    "expected_scheme": "Unified Pension Scheme (UPS)",
+    "expected_behavior": "RETRIEVE",
+    "notes": "occupation matches -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'government employee' matches the requirement 'Government Employee'."
+  },
+  {
+    "id": "case_100",
+    "category": "eligible",
+    "query": "I'm 12 years old and my parents want to open a pension account in my name.",
+    "profile": {
+      "age": 12
+    },
+    "expected_scheme": "NPS Vatsalya",
+    "expected_behavior": "RETRIEVE",
+    "notes": "age within minor range -> eligible",
+    "expected_eligibility": "ELIGIBLE",
+    "relevant_eligibility_conditions": "Age 12 satisfies the required age (at most 18)."
+  },
+  {
+    "id": "case_101",
+    "category": "ineligible",
+    "query": "I'm a farmer, can I access the government-employee-only pension system?",
+    "profile": {
+      "occupation": "farmer"
+    },
+    "expected_scheme": "National Pension System 2004",
+    "expected_behavior": "RETRIEVE",
+    "notes": "occupation mismatch -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Occupation 'farmer' does not match the requirement 'Government Employee'."
+  },
+  {
+    "id": "case_102",
+    "category": "ineligible",
+    "query": "I'm 45 years old, can I still open a minor's NPS Vatsalya account for myself?",
+    "profile": {
+      "age": 45
+    },
+    "expected_scheme": "NPS Vatsalya",
+    "expected_behavior": "RETRIEVE",
+    "notes": "age exceeds max_age 18 -> not eligible",
+    "expected_eligibility": "NOT_ELIGIBLE",
+    "relevant_eligibility_conditions": "Age 45 is above the maximum allowed age of 18."
+  },
+  {
+    "id": "case_103",
+    "category": "ambiguous",
+    "query": "Can you help?",
+    "profile": {},
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "Too vague to identify a specific intent -> falls back to 'general' intent.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_104",
+    "category": "ambiguous",
+    "query": "I don't know where to start.",
+    "profile": {},
+    "expected_scheme": null,
+    "expected_behavior": "ASK_FOR_INFORMATION",
+    "notes": "Too vague to identify a specific intent -> falls back to 'general' intent.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_105",
+    "category": "no_match",
+    "query": "Write me a short story about a dragon.",
+    "profile": {
+      "state": "Delhi",
+      "age": 30,
+      "occupation": "student",
+      "income": 500000,
+      "education": "higher education"
+    },
+    "expected_scheme": null,
+    "expected_behavior": "NO_MATCH",
+    "notes": "Unrelated to any government scheme -> every FAISS candidate should fall below the similarity threshold.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  },
+  {
+    "id": "case_106",
+    "category": "no_match",
+    "query": "What's the square root of 144?",
+    "profile": {
+      "state": "Delhi",
+      "age": 30,
+      "occupation": "student",
+      "income": 500000,
+      "education": "higher education"
+    },
+    "expected_scheme": null,
+    "expected_behavior": "NO_MATCH",
+    "notes": "Unrelated to any government scheme -> every FAISS candidate should fall below the similarity threshold.",
+    "expected_eligibility": null,
+    "relevant_eligibility_conditions": ""
+  }
+]

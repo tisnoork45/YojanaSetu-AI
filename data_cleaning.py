@@ -25,8 +25,13 @@ if "unnamed:_3" in df.columns:
     df.drop(columns=["unnamed:_3"], inplace=True)
 
 df["description"] = df["description"].apply(clean_text)
-df["category"] = df["category"].str.lower()
+df["category"] = df["category"].str.lower().str.strip()
 df["scheme_name"] = df["scheme_name"].str.strip()
+
+before = len(df)
+df = df.drop_duplicates(subset=["scheme_name"]).reset_index(drop=True)
+if len(df) != before:
+    print(f"Removed {before - len(df)} duplicate scheme_name row(s)")
 
 df.to_csv(OUTPUT_FILE, index=False)
 
