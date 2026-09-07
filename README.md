@@ -344,9 +344,7 @@ python test_retrieval.py
 - 🧠 LLM-assisted extraction of complex eligibility rules from official documents.
 - 🌳 Structured eligibility rule trees supporting complex **AND / OR / NOT** conditions.
 - 🔎 Metadata pre-filtering combined with scalable approximate nearest-neighbor search.
-- 👤 More detailed personalized recommendations based on user profiles.
 - ☁️ Cloud deployment for public accessibility.
-- 📈 Expansion of the knowledge base with additional government schemes.
 - 🔄 Automatic detection of changes in government scheme eligibility criteria.
 
 ---
