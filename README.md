@@ -287,7 +287,6 @@ Based on your profile, these government schemes may be relevant:
 - Provides support for eligible agricultural machinery and crop-residue-management activities in Punjab.
 - May be relevant if you are looking for assistance with farm machinery or residue-management equipment.
 
-Please verify the latest eligibility criteria, benefits, and application requirements on the official government portal before applying.
 ---
 
 ## 📦 Installation
